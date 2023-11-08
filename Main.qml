@@ -60,8 +60,8 @@ ApplicationWindow {
             anchors.fill: parent
 
             handle: Rectangle {
-                implicitWidth: 1 // Set the width of the border here
-                color: "#2E303A" // Subtle grey color
+                implicitWidth: 1
+                color: "#2E303A"
             }
 
             LeftSidePane {
