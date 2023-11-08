@@ -2,5 +2,5 @@ import QtQuick
 
 Rectangle{
     id: middlePaneRoot
-    color: "green"
+    color: "#444654"
 }
