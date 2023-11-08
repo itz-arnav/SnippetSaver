@@ -8,7 +8,7 @@ ApplicationWindow {
     id: rootWindow
     visible: true
     title: qsTr("Snippet Saver")
-    visibility: Window.Maximized
+//    visibility: Window.Maximized
     minimumWidth: 900
     minimumHeight: 600
 
@@ -52,7 +52,7 @@ ApplicationWindow {
     }
 
     Drawer {
-        id: drawer
+        id: settingsDrawer
         width: 0.3 * rootWindow.width
         height: rootWindow.height
         edge: Qt.RightEdge

@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>Resources/FontAwesomeIcons/settings_white.svg</file>
+		<file>Resources/FontAwesomeIcons/settings_dark.svg</file>
+    </qresource>
+</RCC>

@@ -2,54 +2,70 @@ import QtQuick
 import QtQuick.Controls
 
 ToolBar {
-           height: 40
-           background: Rectangle {
-               anchors.fill: parent
-               color: "#202123"
-           }
+    height: 50
+    background: Rectangle {
+        anchors.fill: parent
+        color: "#202123"
+    }
 
-           // Use a container item for the search field and its background
-           Item {
-               width: parent.width - (leftSidePane.width + rightSidePane.width)
-               height: 30
-               anchors.verticalCenter: parent.verticalCenter
-               anchors.left: parent.left
-               anchors.leftMargin: leftSidePane.width
-               anchors.right: parent.right
-               anchors.rightMargin: rightSidePane.width
+    Item {
+        width: parent.width - (leftSidePane.width + rightSidePane.width) + 5
+        height: 35
+        anchors.verticalCenter: parent.verticalCenter
+        anchors.left: parent.left
+        anchors.leftMargin: leftSidePane.width
+        anchors.right: parent.right
+        anchors.rightMargin: rightSidePane.width
 
-               Rectangle {
-                   anchors.fill: parent
-                   border.color: "grey"
-                   border.width: 1
-                   radius: 2
-               }
+        TextField {
+            id: searchInput
+            placeholderText: qsTr("Search...")
+            placeholderTextColor: "#aaa"
+            font.pixelSize: 16
+            color: "#bbb"
+            anchors.fill: parent
+            leftPadding: 25
+            rightPadding: 25
+            verticalAlignment: TextEdit.AlignVCenter
+            background: Rectangle{
+                anchors.fill: parent
+                color: "#353641"
+            }
+        }
+    }
 
-               TextField {
-                   id: searchInput
-                   placeholderText: qsTr("Search...")
-                   font.pixelSize: 16
-                   color: "#000"
-                   anchors.fill: parent
-                   padding: 5
-                   leftPadding: 25
-                   rightPadding: 25
-                    verticalAlignment: TextEdit.AlignVCenter
-               }
-           }
+    Rectangle {
+        id: settingsButton
+        anchors.right: parent.right
+        anchors.rightMargin: 2
+        height: parent.height
+        width: 50
+        anchors.verticalCenter: parent.verticalCenter
+        color: "transparent"
 
-           Button {
-               id: settingsButton
+        Image {
+            id: settingsIcon
+            source: "qrc:/Resources/FontAwesomeIcons/settings_white.svg"
+            width: 30
+            height: 30
+            anchors.centerIn: parent
+        }
 
-               text: "Settings"
-               anchors.right: parent.right
-               anchors.rightMargin: 20
-               height: parent.height * 0.8
-               padding: 50
-               anchors.verticalCenter: parent.verticalCenter
+        MouseArea {
+            anchors.fill: parent
+            hoverEnabled: true
+            cursorShape: containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
+            onEntered: settingsButton.color = "#353641"
+            onExited: settingsButton.color = "transparent"
 
-               onClicked: {
-                   drawer.open()
-               }
-           }
-       }
+            onClicked: {
+                console.log("Settings button clicked")
+            }
+
+            onReleased: {
+                settingsButton.color = containsMouse ? "#353641" : "transparent"
+            }
+        }
+
+    }
+}
