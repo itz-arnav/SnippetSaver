@@ -2,15 +2,16 @@ import QtQuick
 import QtQuick.Window
 import QtQuick.Controls
 import QtQuick.Layouts
-import "Components"
+import "ViewComponents/MainPage"
+import "Utils/UI_Services"
 
 ApplicationWindow {
     id: rootWindow
     visible: true
     title: qsTr("Snippet Saver")
     visibility: Window.Maximized
-    minimumWidth: 900
-    minimumHeight: 600
+    minimumWidth: 1000
+    minimumHeight: 650
 
     GlobalActions{
         id: gGlobalActions
@@ -22,7 +23,7 @@ ApplicationWindow {
 
         Rectangle{
             anchors.fill: parent
-            color: "#656565"
+            color: "#767676"
         }
 
         PrefsToolbar{
@@ -37,7 +38,7 @@ ApplicationWindow {
 
         Rectangle{
             anchors.fill: parent
-            color: "#656565"
+            color: "#767676"
         }
 
         SplitView {
@@ -47,7 +48,7 @@ ApplicationWindow {
 
             handle: Rectangle {
                 implicitWidth: 1
-                color: "#2E303A"
+                color: "#555"
             }
 
             LeftSidePane {

@@ -16,9 +16,9 @@ qt_add_qml_module(appSnippetSaver
     URI SnippetSaver
     VERSION 1.0
     QML_FILES Main.qml
-    QML_FILES Components/LeftSidePane.qml Components/MiddlePane.qml Components/RightSidePane.qml
-    QML_FILES Components/PrefsToolbar.qml QML_FILES Components/SettingsPage.qml Components/GlobalActions.qml
     RESOURCES Resource.qrc
+    QML_FILES ViewComponents/MainPage/LeftSidePane.qml ViewComponents/MainPage/MiddlePane.qml ViewComponents/MainPage/PrefsToolbar.qml ViewComponents/MainPage/RightSidePane.qml ViewComponents/MainPage/SettingsPage.qml
+    QML_FILES Utils/UI_Services/GlobalActions.qml
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

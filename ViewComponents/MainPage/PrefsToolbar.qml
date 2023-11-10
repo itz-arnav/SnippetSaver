@@ -5,7 +5,7 @@ ToolBar {
     id: rootToolbar
     background: Rectangle {
         anchors.fill: parent
-        color: "#222"
+        color: "#252527"
 
         Rectangle {
             height: 1
@@ -34,7 +34,7 @@ ToolBar {
         anchors.rightMargin: rightSidePane.width
         Rectangle{
             anchors.fill: parent
-            color: "#464752"
+            color: "#535558"
         }
 
         Rectangle {
@@ -43,7 +43,7 @@ ToolBar {
             width: 35
             height: 35
             anchors.verticalCenter: parent.verticalCenter
-            color: "#464752"
+            color: "#595963"
 
             Image {
                 id: searchIcon
@@ -68,7 +68,7 @@ ToolBar {
             anchors.right: clearIconRect.left
             background: Rectangle{
                 anchors.fill: parent
-                color: "#464752"
+                color: "#595963"
             }
         }
 
@@ -78,7 +78,7 @@ ToolBar {
             width: 35
             height: 35
             anchors.verticalCenter: parent.verticalCenter
-            color: "#464752"
+            color: "#595963"
 
             Image {
                 id: clearIcon
@@ -121,7 +121,7 @@ ToolBar {
             anchors.fill: parent
             hoverEnabled: true
             cursorShape: containsMouse ? Qt.PointingHandCursor : Qt.ArrowCursor
-            onEntered: settingsButton.color = "#464752"
+            onEntered: settingsButton.color = "#595963"
             onExited: settingsButton.color = "transparent"
 
             onClicked: {
@@ -129,7 +129,7 @@ ToolBar {
             }
 
             onReleased: {
-                settingsButton.color = containsMouse ? "#464752" : "transparent"
+                settingsButton.color = containsMouse ? "#595963" : "transparent"
             }
         }
 

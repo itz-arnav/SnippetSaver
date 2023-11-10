@@ -5,12 +5,12 @@ Item {
 
     Rectangle{
         anchors.fill: parent
-        color: "#222"
+        color: "#252527"
     }
 
     Rectangle{
         id: headerRect
-        color: "#202020"
+        color: "#252527"
         width: settingsPageRoot.width
         height: 50
         anchors.top: settingsPageRoot.top
