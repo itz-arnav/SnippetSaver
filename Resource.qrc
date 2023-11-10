@@ -6,5 +6,6 @@
         <file>Resources/FontAwesomeIcons/search_white.svg</file>
         <file>Resources/FontAwesomeIcons/clear_dark.svg</file>
         <file>Resources/FontAwesomeIcons/clear_white.svg</file>
+        <file>Utils/UI_Services/PrefsSpace.qml</file>
     </qresource>
 </RCC>
