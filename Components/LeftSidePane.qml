@@ -2,5 +2,6 @@ import QtQuick
 
 Rectangle{
     id: leftSidePaneRoot
-    color: "#202123"
+    color: "#202020"
 }
+

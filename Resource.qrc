@@ -1,6 +1,12 @@
 <RCC>
     <qresource prefix="/">
         <file>Resources/FontAwesomeIcons/settings_white.svg</file>
-		<file>Resources/FontAwesomeIcons/settings_dark.svg</file>
+        <file>Resources/FontAwesomeIcons/settings_dark.svg</file>
+        <file>Resources/FontAwesomeIcons/search_dark.svg</file>
+        <file>Resources/FontAwesomeIcons/search_white.svg</file>
+        <file>Components/SettingsPage.qml</file>
+        <file>Resources/FontAwesomeIcons/clear_dark.svg</file>
+        <file>Resources/FontAwesomeIcons/clear_white.svg</file>
+        <file>Components/GlobalActions.qml</file>
     </qresource>
 </RCC>

@@ -8,17 +8,37 @@ ApplicationWindow {
     id: rootWindow
     visible: true
     title: qsTr("Snippet Saver")
-//    visibility: Window.Maximized
+    visibility: Window.Maximized
     minimumWidth: 900
     minimumHeight: 600
 
-    header: PrefsToolbar{
-        id: prefsToolbar
+    GlobalActions{
+        id: gGlobalActions
+    }
+
+    header: Item {
+        width: parent.width
+        height: 50
+
+        Rectangle{
+            anchors.fill: parent
+            color: "#656565"
+        }
+
+        PrefsToolbar{
+            id: prefsToolbar
+            anchors.fill: parent
+        }
     }
 
     Item {
         id: rootContainer
         anchors.fill: parent
+
+        Rectangle{
+            anchors.fill: parent
+            color: "#656565"
+        }
 
         SplitView {
             id: rootContainerSplitView
@@ -56,9 +76,22 @@ ApplicationWindow {
         width: 0.3 * rootWindow.width
         height: rootWindow.height
         edge: Qt.RightEdge
-        Label {
-            text: "Content goes here!"
-            anchors.centerIn: parent
+
+        SettingsPage {
+            id: settingsPage
+            width: parent.width
+            height: parent.height
         }
+
+        onClosed: {
+            rootContainerSplitView.opacity = 1
+            prefsToolbar.opacity = 1
+        }
+    }
+
+    Shortcut {
+        sequence: "Ctrl+Q"
+        onActivated: Qt.quit()
+        context: Qt.ApplicationShortcut
     }
 }

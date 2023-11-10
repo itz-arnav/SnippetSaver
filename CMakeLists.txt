@@ -4,7 +4,7 @@ project(SnippetSaver VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick QuickControls2)
 
 qt_standard_project_setup()
 
@@ -17,7 +17,7 @@ qt_add_qml_module(appSnippetSaver
     VERSION 1.0
     QML_FILES Main.qml
     QML_FILES Components/LeftSidePane.qml Components/MiddlePane.qml Components/RightSidePane.qml
-    QML_FILES Components/PrefsToolbar.qml
+    QML_FILES Components/PrefsToolbar.qml QML_FILES Components/SettingsPage.qml Components/GlobalActions.qml
     RESOURCES Resource.qrc
 )
 
@@ -33,7 +33,7 @@ set_target_properties(appSnippetSaver PROPERTIES
 )
 
 target_link_libraries(appSnippetSaver
-    PRIVATE Qt6::Quick
+    PRIVATE Qt6::Quick Qt6::QuickControls2
 )
 
 set_target_properties(appSnippetSaver PROPERTIES
